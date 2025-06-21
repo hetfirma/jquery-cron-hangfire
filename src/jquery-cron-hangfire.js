@@ -38,15 +38,14 @@
         }
     };
 
-    var periodOpts=arrayToOptions(["Minutes", "Hourly", "Daily", "Weekly", "Monthly", "Yearly"]);
+    var periodOpts=arrayToOptions(["Minutes", "Hourly", "Daily", "Weekly", "Monthly"]);
     var minuteOpts=rangeToOptions(1, 60);
     var hourOpts=rangeToOptions(1, 24);
     var dayOpts=rangeToOptions(1, 100);
     var minuteClockOpts=rangeToOptions(0, 59, true);
     var hourClockOpts=rangeToOptions(0, 23, true);
     var dayInMonthOpts=rangeToOptions(1, 31);
-    var monthOpts=arrayToOptions(["January","February","March","April","May","June","July","August","September","October","November","December"],
-                                    [1,2,3,4,5,6,7,8,9,10,11,12]);
+  
     var monthNumOpts=rangeToOptions(1, 12);
     var nthWeekOpts=arrayToOptions(["First", "Second", "Third", "Forth"], [1,2,3,4]);
     var dayOfWeekOpts=arrayToOptions(["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday", "Sunday"], ["MON","TUE","WED","THU","FRI","SAT", "SUN"]);
@@ -119,12 +118,7 @@
                     var $monthlyEl=$selector.siblings('div.cron-monthly');
                     $monthlyEl.show()
                         .find("input[name=monthlyType][value=byDay]").prop('checked', true);
-                    break;
-        /*         case 'Yearly':
-                    var $yearlyEl=$selector.siblings('div.cron-yearly');
-                    $yearlyEl.show()
-                        .find("input[name=yearlyType][value=byDay]").prop('checked', true);
-                    break;    */                 
+                    break;       
             } 
         }
     };
@@ -175,15 +169,6 @@
                 base.$el.find("select.cron-monthly-month-by-week").append(monthNumOpts);
             });
 
-    /*         addInputElements(base.$el, cronInputs.yearly, function() {
-                base.$el.find("select.cron-yearly-month").append(monthOpts); 
-                base.$el.find("select.cron-yearly-day").append(dayInMonthOpts); 
-                base.$el.find("select.cron-yearly-nth-day").append(nthWeekOpts); 
-                base.$el.find("select.cron-yearly-day-of-week").append(dayOfWeekOpts); 
-                base.$el.find("select.cron-yearly-month-by-week").append(monthOpts); 
-            }); */
-            
-            
             base.$el.append(cronInputs.startTime);
             base.$el.find("select.cron-clock-hour").append(hourClockOpts);
             base.$el.find("select.cron-clock-minute").append(minuteClockOpts);
