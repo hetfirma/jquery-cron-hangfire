@@ -164,6 +164,7 @@
             this.$el.find("div.cron-select-period label").text(this.options.selectorLabel);
             this.$el.find("select.cron-period-select")
                 .append(periodOpts)
+                .val(this.options.selectorValue)
                 .on("change", eventHandlers.periodSelect);
 
             addInputElements(this.$el, cronInputs.minutes, () => {
@@ -282,7 +283,8 @@
     };
 
     $.cronBuilder.defaultOptions = {
-        selectorLabel: "Select period: "
+        selectorLabel: "Select period: ",
+        selectorValue: "Weekly"
     };
 
     $.fn.cronBuilder = function (options) {
