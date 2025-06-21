@@ -1,2 +1,2 @@
 # jquery-cron-quartz
-Simple UI to create CRON expressions for Quartz Schedular
+Simple UI to create CRON expressions for Hangfire Schedular
