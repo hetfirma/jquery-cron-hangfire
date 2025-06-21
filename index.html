@@ -41,16 +41,10 @@
             }
         </style>
 
-                <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
-
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="src/jquery-cron-hangfire.js"></script>
         <script type="text/javascript">
-            $(function() {
-
-               
+            $(function() {        
                 $('#example2-cron').cronBuilder({
                   language: "nl_NL",
                      onChange: function(expression) {
@@ -77,23 +71,7 @@
                     <p><strong>Cron Expression:</strong> <span id="example2-result"></span></p>
                 </div>
             </div>
-            <pre>
-$(function() {
-    
-    // Initialize DOM with cron builder 
-    $('#cron').cronBuilder();
-    
-    // Add event handler to button 
-    $('button#generate').click(function(){
-    
-        // Get current cron expression 
-        var expression=$('#cron').data('cronBuilder').getExpression();
-        
-        // Dispaly cron expression
-        $('#result').text(expression);
-    })    
-});</pre>
-
+        </div>
        
     </body>
 </html>
